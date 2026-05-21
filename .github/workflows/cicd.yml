@@ -84,31 +84,41 @@ jobs:
 
       - name: Deploy Application
         run: |
-          cd /var/www
+            APP_DIR=/var/www/auto-clinic
 
-          if [ ! -d "auto-clinic" ]; then
-            git clone https://github.com/${{ github.repository }}.git auto-clinic
-          fi
+            # Clone if project does not exist
+            if [ ! -d "$APP_DIR/.git" ]; then
+              echo "Cloning repository..."
 
-          cd auto-clinic
+              rm -rf $APP_DIR
 
-          git pull origin main
+              git clone https://github.com/${{ github.repository }}.git $APP_DIR
+            fi
 
-          composer install --no-interaction --prefer-dist --optimize-autoloader
+            cd $APP_DIR
 
-          cp .env.example .env || true
+            echo "Pulling latest code..."
 
-          php artisan key:generate || true
+            git pull origin main
 
-          chmod -R 777 storage bootstrap/cache
+            composer install --no-interaction --prefer-dist --optimize-autoloader
 
-          php artisan migrate --force || true
+            # Create env if missing
+            if [ ! -f ".env" ]; then
+              cp .env.example .env
+            fi
 
-          php artisan config:clear
-          php artisan cache:clear
-          php artisan route:clear
-          php artisan view:clear
+            php artisan key:generate || true
 
-          php artisan optimize
+            chmod -R 777 storage bootstrap/cache
 
-          echo "Deployment Successful"
+            php artisan migrate --force || true
+
+            php artisan config:clear
+            php artisan cache:clear
+            php artisan route:clear
+            php artisan view:clear
+
+            php artisan optimize
+
+            echo "Deployment Successful"
