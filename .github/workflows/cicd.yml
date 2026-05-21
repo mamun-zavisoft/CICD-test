@@ -88,15 +88,12 @@ jobs:
 
             # Clone if project does not exist
             if [ ! -d "$APP_DIR/.git" ]; then
-              echo "Cloning repository..."
-
-              rm -rf $APP_DIR
-
-              git clone https://github.com/${{ github.repository }}.git $APP_DIR
+              sudo git clone https://github.com/${{ github.repository }}.git $APP_DIR
             fi
 
             cd $APP_DIR
-
+            git fetch origin main
+            git reset --hard origin/main
             echo "Pulling latest code..."
 
             git pull origin main
