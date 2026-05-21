@@ -73,17 +73,20 @@ jobs:
     steps:
       - name: Deploy Application
         run: |
-            AAPP_DIR=/var/www/auto-clinic
+            set -e
+
+            APP_DIR="/var/www/auto-clinic"
 
             echo "Resetting deployment directory..."
-            sudo rm -rf $APP_DIR
-            sudo mkdir -p $APP_DIR
-            sudo chown -R $USER:$USER $APP_DIR
+
+            sudo rm -rf "$APP_DIR"
+            sudo mkdir -p "$APP_DIR"
+            sudo chown -R $USER:$USER "$APP_DIR"
 
             echo "Cloning repository..."
-            git clone https://github.com/mamun-zavisoft/CICD-test.git $APP_DIR
+            git clone https://github.com/mamun-zavisoft/CICD-test.git "$APP_DIR"
 
-            cd $APP_DIR
+            cd "$APP_DIR"
 
             echo "Installing dependencies..."
             composer install --no-interaction --prefer-dist --optimize-autoloader
