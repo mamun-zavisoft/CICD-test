@@ -31,6 +31,9 @@ jobs:
       run: |
         echo "DB_CONNECTION=sqlite" >> .env
         echo "DB_DATABASE=$(pwd)/database/database.sqlite" >> .env
+        echo "CACHE_STORE=file" >> .env
+        echo "SESSION_DRIVER=file" >> .env
+        echo "QUEUE_CONNECTION=sync" >> .env
 
     - name: Install Dependencies
       run: composer install --no-interaction --prefer-dist
