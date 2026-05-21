@@ -86,19 +86,18 @@ jobs:
         run: |
             APP_DIR=/var/www/auto-clinic
 
+            git config --global --add safe.directory $APP_DIR
+
             # Clone if project does not exist
             if [ ! -d "$APP_DIR/.git" ]; then
               sudo git clone https://github.com/${{ github.repository }}.git $APP_DIR
             fi
 
             cd $APP_DIR
-            git fetch origin main
+
+            git fetch origin
             git reset --hard origin/main
-            echo "Pulling latest code..."
-
-            git pull origin main
-
-            composer install --no-interaction --prefer-dist --optimize-autoloader
+            sudo composer install --no-interaction --prefer-dist --optimize-autoloader
 
             # Create env if missing
             if [ ! -f ".env" ]; then
