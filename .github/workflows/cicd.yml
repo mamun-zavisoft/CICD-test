@@ -40,6 +40,17 @@ jobs:
           name: laravel-test-results
           path: test-results.txt
 
+          # ১. প্রথমে একটি খালি sqlite ফাইল তৈরি করুন
+      - name: Create Database File
+        run: touch database/database.sqlite
+
+      # ২. এনভায়রনমেন্ট ভেরিয়েবলসহ টেস্ট রান করুন
+      - name: Run Tests
+        env:
+          DB_CONNECTION: sqlite
+          DB_DATABASE: database/database.sqlite
+        run: php artisan test
+
   deploy:
     needs: test
 
