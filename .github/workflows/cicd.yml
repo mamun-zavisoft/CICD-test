@@ -46,7 +46,7 @@ jobs:
 
     - name: Run Tests
       run: |
-        php artisan test > test-results.txt
+        php artisan test | tee test-results.txt
 
     - name: Upload Test Artifact
       uses: actions/upload-artifact@v4
