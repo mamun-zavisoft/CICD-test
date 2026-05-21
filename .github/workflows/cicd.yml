@@ -11,45 +11,48 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Source
-        uses: actions/checkout@v4
+    - name: Checkout Source
+      uses: actions/checkout@v4
 
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: 8.2
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: 8.2
 
-      - name: Copy .env
-        run: cp .env.example .env
+    - name: Copy .env
+      run: cp .env.example .env
 
-      - name: Install Dependencies
-        run: composer install --no-interaction --prefer-dist
+    - name: Create SQLite Database
+      run: |
+        mkdir -p database
+        touch database/database.sqlite
 
-      - name: Generate App Key
-        run: php artisan key:generate
+    - name: Configure Environment
+      run: |
+        echo "DB_CONNECTION=sqlite" >> .env
+        echo "DB_DATABASE=$(pwd)/database/database.sqlite" >> .env
 
-      - name: Set Permissions
-        run: chmod -R 777 storage bootstrap/cache
+    - name: Install Dependencies
+      run: composer install --no-interaction --prefer-dist
 
-      - name: Run Tests
-        run: php artisan test
+    - name: Generate App Key
+      run: php artisan key:generate
 
-      - name: Upload Test Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: laravel-test-results
-          path: test-results.txt
+    - name: Set Permissions
+      run: chmod -R 777 storage bootstrap/cache
 
-          # ১. প্রথমে একটি খালি sqlite ফাইল তৈরি করুন
-      - name: Create Database File
-        run: touch database/database.sqlite
+    - name: Run Database Migrations
+      run: php artisan migrate --force
 
-      # ২. এনভায়রনমেন্ট ভেরিয়েবলসহ টেস্ট রান করুন
-      - name: Run Tests
-        env:
-          DB_CONNECTION: sqlite
-          DB_DATABASE: ":memory:"
-        run: php artisan test
+    - name: Run Tests
+      run: |
+        php artisan test > test-results.txt
+
+    - name: Upload Test Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: laravel-test-results
+        path: test-results.txt
 
   deploy:
     needs: test
