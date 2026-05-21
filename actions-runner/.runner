@@ -1,0 +1,11 @@
+﻿{
+  "agentId": 2,
+  "agentName": "ip-172-31-26-23",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelinesghubeus6.actions.githubusercontent.com/wUHJemLrCQlDuQZxd0NIZeDm5skksd6sAV3o55SWT8TvmUdzz2/",
+  "gitHubUrl": "https://github.com/mamun-zavisoft/CICD-test",
+  "workFolder": "_work",
+  "useV2Flow": true,
+  "serverUrlV2": "https://broker.actions.githubusercontent.com/"
+}

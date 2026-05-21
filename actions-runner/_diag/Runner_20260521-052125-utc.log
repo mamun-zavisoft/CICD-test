@@ -1,0 +1,143 @@
+[2026-05-21 05:21:25Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2026-05-21 05:21:25Z INFO HostContext] Well known directory 'Bin': '/tmp/actions-runner/bin'
+[2026-05-21 05:21:25Z INFO HostContext] Well known directory 'Root': '/tmp/actions-runner'
+[2026-05-21 05:21:25Z INFO HostContext] Well known config file 'Credentials': '/tmp/actions-runner/.credentials'
+[2026-05-21 05:21:25Z INFO HostContext] Well known directory 'Bin': '/tmp/actions-runner/bin'
+[2026-05-21 05:21:25Z INFO HostContext] Well known directory 'Root': '/tmp/actions-runner'
+[2026-05-21 05:21:25Z INFO HostContext] Well known config file 'Runner': '/tmp/actions-runner/.runner'
+[2026-05-21 05:21:25Z INFO Listener] Runner is built for Linux (X64) - linux-x64.
+[2026-05-21 05:21:25Z INFO Listener] RuntimeInformation: Amazon Linux 2023.11.20260514.
+[2026-05-21 05:21:25Z INFO Listener] Version: 2.334.0
+[2026-05-21 05:21:25Z INFO Listener] Commit: f1995ede5d885c997d13d8eca5467c4ce97fe69c
+[2026-05-21 05:21:25Z INFO Listener] Culture: 
+[2026-05-21 05:21:25Z INFO Listener] UI Culture: 
+[2026-05-21 05:21:25Z INFO HostContext] Well known directory 'Bin': '/tmp/actions-runner/bin'
+[2026-05-21 05:21:25Z INFO HostContext] Well known directory 'Root': '/tmp/actions-runner'
+[2026-05-21 05:21:25Z INFO Listener] Validating directory permissions for: '/tmp/actions-runner'
+[2026-05-21 05:21:25Z INFO CommandLineParser] Parse
+[2026-05-21 05:21:25Z INFO CommandLineParser] Parsing 5 args
+[2026-05-21 05:21:25Z INFO CommandLineParser] parsing argument
+[2026-05-21 05:21:25Z INFO CommandLineParser] HasArgs: False
+[2026-05-21 05:21:25Z INFO CommandLineParser] Adding Command: configure
+[2026-05-21 05:21:25Z INFO CommandLineParser] parsing argument
+[2026-05-21 05:21:25Z INFO CommandLineParser] HasArgs: True
+[2026-05-21 05:21:25Z INFO CommandLineParser] arg: url
+[2026-05-21 05:21:25Z INFO CommandLineParser] parsing argument
+[2026-05-21 05:21:25Z INFO CommandLineParser] HasArgs: True
+[2026-05-21 05:21:25Z INFO CommandLineParser] Adding option 'url': 'https://github.com/mamun-zavisoft/CICD-test'
+[2026-05-21 05:21:25Z INFO CommandLineParser] parsing argument
+[2026-05-21 05:21:25Z INFO CommandLineParser] HasArgs: True
+[2026-05-21 05:21:25Z INFO CommandLineParser] arg: token
+[2026-05-21 05:21:25Z INFO CommandLineParser] parsing argument
+[2026-05-21 05:21:25Z INFO CommandLineParser] HasArgs: True
+[2026-05-21 05:21:25Z INFO CommandLineParser] Adding option 'token': '***'
+[2026-05-21 05:21:25Z INFO Listener] Arguments parsed
+[2026-05-21 05:21:25Z INFO Runner] ExecuteCommand
+[2026-05-21 05:21:25Z INFO ConfigurationStore] currentAssemblyLocation: /tmp/actions-runner/bin/Runner.Listener.dll
+[2026-05-21 05:21:25Z INFO HostContext] Well known directory 'Bin': '/tmp/actions-runner/bin'
+[2026-05-21 05:21:25Z INFO ConfigurationStore] binPath: /tmp/actions-runner/bin
+[2026-05-21 05:21:25Z INFO HostContext] Well known directory 'Bin': '/tmp/actions-runner/bin'
+[2026-05-21 05:21:25Z INFO HostContext] Well known directory 'Root': '/tmp/actions-runner'
+[2026-05-21 05:21:25Z INFO ConfigurationStore] RootFolder: /tmp/actions-runner
+[2026-05-21 05:21:25Z INFO HostContext] Well known directory 'Bin': '/tmp/actions-runner/bin'
+[2026-05-21 05:21:25Z INFO HostContext] Well known directory 'Root': '/tmp/actions-runner'
+[2026-05-21 05:21:25Z INFO HostContext] Well known config file 'Runner': '/tmp/actions-runner/.runner'
+[2026-05-21 05:21:25Z INFO ConfigurationStore] ConfigFilePath: /tmp/actions-runner/.runner
+[2026-05-21 05:21:25Z INFO HostContext] Well known directory 'Bin': '/tmp/actions-runner/bin'
+[2026-05-21 05:21:25Z INFO HostContext] Well known directory 'Root': '/tmp/actions-runner'
+[2026-05-21 05:21:25Z INFO HostContext] Well known config file 'MigratedRunner': '/tmp/actions-runner/.runner_migrated'
+[2026-05-21 05:21:25Z INFO ConfigurationStore] MigratedConfigFilePath: /tmp/actions-runner/.runner_migrated
+[2026-05-21 05:21:25Z INFO HostContext] Well known directory 'Bin': '/tmp/actions-runner/bin'
+[2026-05-21 05:21:25Z INFO HostContext] Well known directory 'Root': '/tmp/actions-runner'
+[2026-05-21 05:21:25Z INFO HostContext] Well known config file 'Credentials': '/tmp/actions-runner/.credentials'
+[2026-05-21 05:21:25Z INFO ConfigurationStore] CredFilePath: /tmp/actions-runner/.credentials
+[2026-05-21 05:21:25Z INFO HostContext] Well known directory 'Bin': '/tmp/actions-runner/bin'
+[2026-05-21 05:21:25Z INFO HostContext] Well known directory 'Root': '/tmp/actions-runner'
+[2026-05-21 05:21:25Z INFO HostContext] Well known config file 'MigratedCredentials': '/tmp/actions-runner/.credentials_migrated'
+[2026-05-21 05:21:25Z INFO ConfigurationStore] MigratedCredFilePath: /tmp/actions-runner/.credentials_migrated
+[2026-05-21 05:21:25Z INFO HostContext] Well known directory 'Bin': '/tmp/actions-runner/bin'
+[2026-05-21 05:21:25Z INFO HostContext] Well known directory 'Root': '/tmp/actions-runner'
+[2026-05-21 05:21:25Z INFO HostContext] Well known config file 'Service': '/tmp/actions-runner/.service'
+[2026-05-21 05:21:25Z INFO ConfigurationStore] ServiceConfigFilePath: /tmp/actions-runner/.service
+[2026-05-21 05:21:25Z INFO CommandSettings] Flag 'help': 'False'
+[2026-05-21 05:21:25Z INFO CommandSettings] Flag 'version': 'False'
+[2026-05-21 05:21:25Z INFO CommandSettings] Flag 'commit': 'False'
+[2026-05-21 05:21:25Z INFO CommandSettings] Flag 'check': 'False'
+[2026-05-21 05:21:25Z INFO CommandSettings] Command 'configure': 'True'
+[2026-05-21 05:21:25Z INFO Terminal] WRITE LINE: 
+[2026-05-21 05:21:25Z INFO Terminal] WRITE LINE: --------------------------------------------------------------------------------
+[2026-05-21 05:21:25Z INFO Terminal] WRITE LINE: |        ____ _ _   _   _       _          _        _   _                      |
+[2026-05-21 05:21:25Z INFO Terminal] WRITE LINE: |       / ___(_) |_| | | |_   _| |__      / \   ___| |_(_) ___  _ __  ___      |
+[2026-05-21 05:21:25Z INFO Terminal] WRITE LINE: |      | |  _| | __| |_| | | | | '_ \    / _ \ / __| __| |/ _ \| '_ \/ __|     |
+[2026-05-21 05:21:25Z INFO Terminal] WRITE LINE: |      | |_| | | |_|  _  | |_| | |_) |  / ___ \ (__| |_| | (_) | | | \__ \     |
+[2026-05-21 05:21:25Z INFO Terminal] WRITE LINE: |       \____|_|\__|_| |_|\__,_|_.__/  /_/   \_\___|\__|_|\___/|_| |_|___/     |
+[2026-05-21 05:21:25Z INFO Terminal] WRITE LINE: |                                                                              |
+[2026-05-21 05:21:25Z INFO Terminal] WRITE: |                       
+[2026-05-21 05:21:25Z INFO Terminal] WRITE: Self-hosted runner registration
+[2026-05-21 05:21:25Z INFO Terminal] WRITE LINE:                         |
+[2026-05-21 05:21:25Z INFO Terminal] WRITE LINE: |                                                                              |
+[2026-05-21 05:21:25Z INFO Terminal] WRITE LINE: --------------------------------------------------------------------------------
+[2026-05-21 05:21:25Z INFO ConfigurationManager] ConfigureAsync
+[2026-05-21 05:21:25Z INFO CommandSettings] Flag 'generateServiceConfig': 'False'
+[2026-05-21 05:21:25Z INFO ConfigurationStore] IsConfigured()
+[2026-05-21 05:21:25Z INFO ConfigurationStore] IsConfigured: False
+[2026-05-21 05:21:25Z INFO ConfigurationManager] Is configured: False
+[2026-05-21 05:21:25Z INFO CommandSettings] Arg 'url': 'https://github.com/mamun-zavisoft/CICD-test'
+[2026-05-21 05:21:25Z INFO CommandSettings] Remove url from Arg dictionary.
+[2026-05-21 05:21:25Z INFO CommandSettings] Arg 'token': '***'
+[2026-05-21 05:21:25Z INFO CommandSettings] Remove token from Arg dictionary.
+[2026-05-21 05:21:26Z INFO ConfigurationManager] Http response code: OK from 'POST https://api.github.com/actions/runner-registration' (B54E:1F67B8:13F7AF:4D0F0E:6A0E9655)
+[2026-05-21 05:21:26Z INFO ConfigurationManager] Using runner-admin flow: False
+[2026-05-21 05:21:26Z INFO ConfigurationManager] cred retrieved via GitHub auth
+[2026-05-21 05:21:26Z INFO RunnerServer] EstablishVssConnection
+[2026-05-21 05:21:26Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2026-05-21 05:21:26Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2026-05-21 05:21:26Z INFO RunnerServer] EstablishVssConnection
+[2026-05-21 05:21:26Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2026-05-21 05:21:26Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2026-05-21 05:21:26Z INFO RunnerServer] EstablishVssConnection
+[2026-05-21 05:21:26Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2026-05-21 05:21:26Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2026-05-21 05:21:26Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2026-05-21 05:21:26Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2026-05-21 05:21:26Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2026-05-21 05:21:26Z INFO Terminal] WRITE LINE: 
+[2026-05-21 05:21:26Z INFO ConfigurationManager] Test Connection complete.
+[2026-05-21 05:21:26Z INFO HostContext] Well known directory 'Bin': '/tmp/actions-runner/bin'
+[2026-05-21 05:21:26Z INFO HostContext] Well known directory 'Root': '/tmp/actions-runner'
+[2026-05-21 05:21:26Z INFO HostContext] Well known config file 'RSACredentials': '/tmp/actions-runner/.credentials_rsaparams'
+[2026-05-21 05:21:26Z INFO RSAFileKeyManager] Creating new RSA key using 2048-bit key length
+[2026-05-21 05:21:26Z INFO RSAFileKeyManager] Successfully saved RSA key parameters to file /tmp/actions-runner/.credentials_rsaparams
+[2026-05-21 05:21:26Z INFO RSAFileKeyManager] Which2: 'chmod'
+[2026-05-21 05:21:26Z INFO RSAFileKeyManager] Location: '/usr/bin/chmod'
+[2026-05-21 05:21:26Z INFO HostContext] Well known directory 'Bin': '/tmp/actions-runner/bin'
+[2026-05-21 05:21:26Z INFO HostContext] Well known directory 'Root': '/tmp/actions-runner'
+[2026-05-21 05:21:26Z INFO ProcessInvokerWrapper] Starting process:
+[2026-05-21 05:21:26Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/chmod'
+[2026-05-21 05:21:26Z INFO ProcessInvokerWrapper]   Arguments: '600 /tmp/actions-runner/.credentials_rsaparams'
+[2026-05-21 05:21:26Z INFO ProcessInvokerWrapper]   Working directory: '/tmp/actions-runner'
+[2026-05-21 05:21:26Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2026-05-21 05:21:26Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2026-05-21 05:21:26Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2026-05-21 05:21:26Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2026-05-21 05:21:26Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2026-05-21 05:21:26Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2026-05-21 05:21:26Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2026-05-21 05:21:26Z INFO ProcessInvokerWrapper] Process started with process id 29186, waiting for process exit.
+[2026-05-21 05:21:26Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-05-21 05:21:26Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2026-05-21 05:21:26Z INFO ProcessInvokerWrapper] Finished process 29186 with exit code 0, and elapsed time 00:00:00.0056366.
+[2026-05-21 05:21:26Z INFO RSAFileKeyManager] Successfully set permissions for RSA key parameters file /tmp/actions-runner/.credentials_rsaparams
+[2026-05-21 05:21:26Z INFO CommandSettings] Arg 'runnergroup': ''
+[2026-05-21 05:21:26Z INFO CommandSettings] Flag 'unattended': 'False'
+[2026-05-21 05:21:26Z INFO PromptManager] ReadValue
+[2026-05-21 05:21:26Z INFO Terminal] WRITE: Enter the name of the runner group to add this runner to: 
+[2026-05-21 05:21:26Z INFO Terminal] WRITE: [press Enter for Default] 
+[2026-05-21 05:21:26Z INFO Terminal] READ LINE
+[2026-05-21 05:21:58Z INFO Terminal] Read value: 'self-hosted'
+[2026-05-21 05:21:58Z INFO Terminal] WRITE LINE: 
+[2026-05-21 05:21:58Z ERR  Runner] GitHub.DistributedTask.WebApi.TaskAgentPoolNotFoundException: Could not find any self-hosted runner group named "self-hosted".
+   at GitHub.Runner.Listener.Configuration.ConfigurationManager.ConfigureAsync(CommandSettings command)
+   at GitHub.Runner.Listener.Runner.ExecuteCommand(CommandSettings command)
+[2026-05-21 05:21:58Z ERR  Terminal] WRITE ERROR: Could not find any self-hosted runner group named "self-hosted".
+[2026-05-21 05:21:58Z INFO Listener] Runner execution has finished with return code 1
