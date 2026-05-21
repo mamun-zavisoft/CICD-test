@@ -86,35 +86,30 @@ jobs:
         run: |
             APP_DIR=/var/www/auto-clinic
 
-            git config --global --add safe.directory $APP_DIR
+              git config --global --add safe.directory $APP_DIR
 
-            # Clone if project does not exist
-            if [ ! -d "$APP_DIR/.git" ]; then
-              sudo git clone https://github.com/${{ github.repository }}.git $APP_DIR
-            fi
+              if [ ! -d "$APP_DIR/.git" ]; then
+                git clone https://github.com/mamun-zavisoft/CICD-test.git $APP_DIR
+              fi
 
-            cd $APP_DIR
+              cd $APP_DIR
 
-            git fetch origin
-            git reset --hard origin/main
-            sudo composer install --no-interaction --prefer-dist --optimize-autoloader
+              git fetch origin
+              git reset --hard origin/main
 
-            # Create env if missing
-            if [ ! -f ".env" ]; then
-              cp .env.example .env
-            fi
+              composer install --no-interaction --prefer-dist --optimize-autoloader
 
-            php artisan key:generate || true
+              if [ ! -f ".env" ]; then
+                cp .env.example .env
+              fi
 
-            chmod -R 777 storage bootstrap/cache
+              php artisan key:generate || true
 
-            php artisan migrate --force || true
+              chmod -R 775 storage bootstrap/cache
 
-            php artisan config:clear
-            php artisan cache:clear
-            php artisan route:clear
-            php artisan view:clear
+              php artisan migrate --force || true
 
-            php artisan optimize
+              php artisan optimize:clear
+              php artisan optimize
 
-            echo "Deployment Successful"
+              echo "Deployment Successful"
