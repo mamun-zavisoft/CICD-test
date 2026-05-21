@@ -32,8 +32,7 @@ jobs:
         run: chmod -R 777 storage bootstrap/cache
 
       - name: Run Tests
-        run: |
-          php artisan test > test-results.txt
+        run: php artisan test
 
       - name: Upload Test Artifact
         uses: actions/upload-artifact@v4
